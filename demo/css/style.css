@@ -1,0 +1,19 @@
+body {
+    font-family: arial;
+}
+
+.accordion {
+    width: 400px;
+}
+
+.accordion h1, .accordion .header {
+    padding: 5px;
+    margin: 0;
+    background: #999999;
+    color: #ffffff;
+}
+
+.accordion div, .accordion .content {
+    padding: 5px;
+    border: 1px solid #999999;
+}
