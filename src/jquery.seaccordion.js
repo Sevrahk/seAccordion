@@ -19,8 +19,15 @@
                     easing: params.easing
                 };
 
-            if(params.singleOpen === true && params.allowAllClosed === false)
-                obj.children(params.content).first().addClass('opened');
+            if(params.singleOpen === true)
+            {
+                var nbrOpenend = obj.children(params.content + '.opened').length;
+
+                if(nbrOpenend > 1)
+                    obj.children(params.content + '.opened:not(:first)').removeClass('opened');
+                else if(nbrOpenend === 0 && params.allowAllClosed === false)
+                    obj.children(params.content).first().addClass('opened');
+            }
 
             obj.children(params.header).css('cursor', 'pointer');
             obj.children(params.content + ':not(.opened)').css('display', 'none');
