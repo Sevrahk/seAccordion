@@ -16,8 +16,7 @@
                 slideOptions = {
                     duration: params.speed,
                     easing: params.easing
-                },
-                openContent = false;
+                };
 
             if(params.singleOpen === true)
                 obj.children(params.content).first().addClass('opened');
