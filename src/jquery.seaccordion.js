@@ -6,6 +6,7 @@
             speed: 'slow',
             easing: 'swing',
             singleOpen: true,
+            allowAllClosed: false,
             triggerEvent: 'click'
         };
         var params = $.extend(defaults, options);
@@ -18,7 +19,7 @@
                     easing: params.easing
                 };
 
-            if(params.singleOpen === true)
+            if(params.singleOpen === true && params.allowAllClosed === false)
                 obj.children(params.content).first().addClass('opened');
 
             obj.children(params.header).css('cursor', 'pointer');
@@ -39,7 +40,7 @@
                 }
                 else
                 {
-                    if(params.singleOpen === true)
+                    if(params.singleOpen === true && params.allowAllClosed === false)
                         return;
 
                     $(this).next(params.content).stop().removeClass('opened').slideUp(slideOptions);
