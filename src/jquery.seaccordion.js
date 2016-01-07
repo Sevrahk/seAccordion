@@ -40,8 +40,8 @@
                 {
                     if(params.singleOpen === true)
                         return;
-                    else
-                        $(this).next(params.content).stop().removeClass('opened').slideUp(slideOptions);
+
+                    $(this).next(params.content).stop().removeClass('opened').slideUp(slideOptions);
                 }
             });
         });
