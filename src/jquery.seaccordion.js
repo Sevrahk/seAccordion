@@ -13,7 +13,7 @@
 
         return this.each(function() {
             var obj = $(this),
-                triggerEvent = 'touchstart click',
+                triggerEvent = params.triggerEvent !== 'mouseover' ? 'touchstart click' : 'mouseover',
                 slideOptions = {
                     duration: params.speed,
                     easing: params.easing
@@ -24,9 +24,6 @@
 
             obj.children(params.header).css('cursor', 'pointer');
             obj.children(params.content + ':not(.opened)').css('display', 'none');
-
-            if(params.triggerEvent === 'mouseover')
-                triggerEvent = 'mouseover';
 
             obj.children(params.header).off().on(triggerEvent, function(e) {
                 e.preventDefault();
