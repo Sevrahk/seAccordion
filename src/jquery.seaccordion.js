@@ -25,7 +25,7 @@
             obj.children(params.header).css('cursor', 'pointer');
             obj.children(params.content + ':not(.opened)').css('display', 'none');
 
-            if(params.triggerEvent === 'hover')
+            if(params.triggerEvent === 'mouseover')
                 triggerEvent = 'mouseover';
 
             obj.children(params.header).off().on(triggerEvent, function(e) {
