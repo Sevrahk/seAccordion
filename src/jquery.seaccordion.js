@@ -28,7 +28,9 @@
             if(params.triggerEvent === 'hover')
                 triggerEvent = 'mouseover';
 
-            obj.children(params.header).off().on(triggerEvent, function() {
+            obj.children(params.header).off().on(triggerEvent, function(e) {
+                e.preventDefault();
+
                 if(!$(this).next(params.content).hasClass('opened'))
                 {
                     if(params.singleOpen === true)
