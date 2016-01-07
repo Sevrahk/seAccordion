@@ -18,16 +18,16 @@
                     easing: params.easing
                 },
                 openContent = false;
-            
+
             if(params.singleOpen === true)
                 obj.children(params.content).first().addClass('opened');
-            
+
             obj.children(params.header).css('cursor', 'pointer');
             obj.children(params.content + ':not(.opened)').css('display', 'none');
 
             if(params.triggerEvent === 'hover')
                 triggerEvent = 'mouseover';
-            
+
             obj.children(params.header).off().on(triggerEvent, function() {
                 if(!$(this).next(params.content).hasClass('opened'))
                 {
