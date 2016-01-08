@@ -1,6 +1,6 @@
 {
   "name": "seaccordion",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple jQuery accordion plugin",
   "main": "src/jquery.seaccordion.js",
   "scripts": {

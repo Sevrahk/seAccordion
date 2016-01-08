@@ -10,7 +10,11 @@
         $(document).ready(function() {
             $('.accordion').seAccordion({
                 header: '.header',
-                content: '.content'
+                content: '.content',
+                speed: 2000,
+                easing: 'linear',
+                singleOpen: false,
+                triggerEvent: 'mouseover'
             });
         });
     </script>
